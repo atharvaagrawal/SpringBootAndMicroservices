@@ -13,6 +13,8 @@ public class StrategyDPTest {
 		AnnotationConfigApplicationContext ctx = 
 				new AnnotationConfigApplicationContext(AppConfig.class);
 		
+		System.out.println("IOC Container Created");
+		
 		// get target class obj
 		Amazon amz = ctx.getBean("amz", Amazon.class); 
 				

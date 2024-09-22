@@ -5,10 +5,16 @@ import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 @Component("amz")
+@Lazy(true)
 public final class Amazon {
+	
+	public Amazon() {
+		System.out.println("Amazon.Amazon()");
+	}
 	
 	// HAS-A Property
 	@Autowired
